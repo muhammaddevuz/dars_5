@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lesson43/views/screens/home_screen.dart';
-import 'package:lesson43/views/screens/settings_screen.dart';
+import 'package:lesson43/views/screens/todo_screens.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({
@@ -32,8 +32,7 @@ class CustomDrawer extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (ctx) {
-                    return const HomeScreen(
-                    );
+                    return const HomeScreen();
                   },
                 ),
               );
@@ -47,18 +46,17 @@ class CustomDrawer extends StatelessWidget {
           ),
           ListTile(
             onTap: () {
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (ctx) {
-                    return const SettingsScreen(
-                    );
+                    return  ToDoScreen();
                   },
                 ),
               );
             },
             title: const Text(
-              "Sozlamalar",
+              "ToDo",
             ),
             trailing: const Icon(
               Icons.keyboard_arrow_right,
